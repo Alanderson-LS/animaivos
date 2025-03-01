@@ -8,7 +8,6 @@ from pathlib import Path
 global balao
 balao = turtle.Turtle()
 balao.hideturtle()
-balao.down()
 
 def carrega_personagens():
     """Carrega os personagens da animação.
@@ -28,18 +27,21 @@ def carrega_personagens():
 
 def fala(personagem: turtle.Turtle, 
          texto: str, 
-         angulo: int = 45, 
-         distancia: int = 150,
-         tempo: float = 5):
+         angulo: int, 
+         distancia: int,
+         tempo: float,
+         ):
     """Exibe um balão de fala para um personagem.
 
     Exibe um balão de fala para um personagem, com o texto
     passado como parâmetro, em um ângulo e distância específicos.
     """
-    
+    balao.up()
     x,y = personagem.pos()
-    balao.goto(x, y)   
-    balao.left(angulo)
+
+    balao.goto(x, y) 
+    balao.down() 
+    balao.left(angulo) 
     balao.forward(distancia)
     balao.write(texto)
     time.sleep(tempo)
