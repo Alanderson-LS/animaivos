@@ -49,12 +49,67 @@ def movimento():
         andar(douglas, 0, -10)
         screen.update()
         time.sleep(0.1)
+        """
+        novas posições: 
+        Nascimento(275, 120)
+        Douglas(275, 240)
+        """
 
 def movimento_2():
     for i in range(20):
         andar(alanderson, 10, 0)
         screen.update()
+        """
+        nova posição
+        Alanderson: (-250, -130)
+        """
+
+def movimento_3():
+    for i in range(25):
+        andar(alanderson, 10, 10)
+        time.sleep(0.05)
+        screen.update()
+        """
+        nova posição
+        Alanderson: (0, 120)
+        """
+
+    for i in range(6):
+        andar(nascimento, 0, -10)
+        screen.update()
+        andar(douglas, 0, -10)
+        screen.update()
+        andar(alanderson, 10, 0)
+        screen.update()
+        time.sleep(0.05)
+        """
+        novas posições:
+        Alanderson: (60, 120)
+        Nascimento: (275, 60)
+        Douglas: (275, 180)
+        """
+
+    for i in range(12):
+        andar(nascimento, 10, 0)
+        screen.update()
+        andar(douglas, 0, - 10)
+        screen.update()
+        andar(alanderson, 5, -5)
+        time.sleep(0.1)
+        screen.update()
+        """
+        novas posições:
+        Alanderson: (120, 60)
+        Nascimento: (395, 60)
+        Douglas: (275, 60)
+        """
     
+    for i in range(33):
+        andar(nascimento, 10, 0)
+        andar(douglas, 10, 0)
+        andar(alanderson, 10, 0)
+        time.sleep(0.05)
+        screen.update()
 
 
 def cena1():
@@ -65,6 +120,10 @@ def cena1():
     fala(douglas, "Esse amostradinho vai gaziar é?", 225, 150, 5)
     movimento_2()
     fala(alanderson, "Perdi a hora galado, esqueci até da canelite de tanto correr", 45, 150, 5)
+    fala(nascimento, "Corre lek, vamo atrasar", 225, 150, 5)
+    screen.tracer(0)
+    movimento_3()
+
 cena1()
 turtle.done()
 
