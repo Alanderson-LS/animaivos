@@ -1,3 +1,5 @@
+#arquivo apagável e ignorável, criado para testar a função fala sem ter que ver a cena inteira das animações
+
 from pacote.nucleo import fala
 
 import turtle

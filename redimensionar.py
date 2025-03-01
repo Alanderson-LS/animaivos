@@ -1,3 +1,5 @@
+#nem toda imagem já vem no tamanho adequado, usando a biblioteca pillow é possível redimensionar as imagens
+
 from pacote.personagens import *
 
 import os
