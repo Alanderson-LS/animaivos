@@ -17,3 +17,6 @@ redimensionar_imagem("pacote/personagens/douglas.gif", "pacote/personagens/dougl
 redimensionar_imagem("pacote/personagens/nascimento.gif", "pacote/personagens/nascimento_redimensionado.gif", 100, 100)
 redimensionar_imagem("pacote/personagens/alanderson.gif", "pacote/personagens/alanderson_redimensionado.gif", 100, 100)
 redimensionar_imagem("pacote/fundos/rua.png", "pacote/fundos/rua_redimensionada.gif", 800, 800)
+redimensionar_imagem("pacote/personagens/alanderson_falando.png","pacote/personagens/alanderson_falando.gif", 100, 100)
+redimensionar_imagem("pacote/personagens/gabriel_falando.png","pacote/personagens/nascimento_falando.gif", 100, 100)
+redimensionar_imagem("pacote/personagens/douglas_falando.png","pacote/personagens/douglas_falando.gif", 100, 100)

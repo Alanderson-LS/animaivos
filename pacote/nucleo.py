@@ -29,13 +29,16 @@ def fala(personagem: turtle.Turtle,
          texto: str, 
          angulo: int, 
          distancia: int,
-         tempo: float,
+         tempo: int,
+         personagem_falando,
+         personagem_shape
          ):
     """Exibe um balão de fala para um personagem.
 
     Exibe um balão de fala para um personagem, com o texto
     passado como parâmetro, em um ângulo e distância específicos.
     """
+    
     balao.up()
     x,y = personagem.pos()
 
@@ -44,7 +47,11 @@ def fala(personagem: turtle.Turtle,
     balao.left(angulo) 
     balao.forward(distancia)
     balao.write(texto)
-    time.sleep(tempo)
+    for i in range(tempo):
+        personagem.shape(personagem_falando)
+        time.sleep(0.5)
+        personagem.shape(personagem_shape)
+        time.sleep(0.5)
     balao.undo()
     balao.undo()
     balao.undo()

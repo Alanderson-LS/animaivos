@@ -5,11 +5,18 @@ import time
 
 balao = turtle.Turtle()
 balao.hideturtle()
-
+turtle.addshape("pacote/personagens/nascimento_falando.gif")
 turtle.addshape("pacote/personagens/alanderson_redimensionado.gif")
 turtle.addshape("pacote/personagens/nascimento_redimensionado.gif")
 turtle.addshape("pacote/personagens/douglas_redimensionado.gif")
-
+turtle.addshape("pacote/personagens/alanderson_falando.gif")
+turtle.addshape("pacote/personagens/douglas_falando.gif")
+alanderson_shape = ("pacote/personagens/alanderson_redimensionado.gif")
+nascimento_shape = ("pacote/personagens/nascimento_redimensionado.gif")
+douglas_shape = ("pacote/personagens/douglas_redimensionado.gif")
+alanderson_falando = ("pacote/personagens/alanderson_falando.gif")
+nascimento_falando = ("pacote/personagens/nascimento_falando.gif")
+douglas_falando = ("pacote/personagens/douglas_falando.gif")
 def rua_personagens():
     global nascimento, alanderson, douglas, screen
     turtle.tracer(0)
@@ -95,7 +102,7 @@ def movimento_3():
         andar(douglas, 0, - 10)
         screen.update()
         andar(alanderson, 5, -5)
-        time.sleep(0.1)
+        time.sleep(0.05)
         screen.update()
         """
         novas posições:
@@ -116,11 +123,11 @@ def cena1():
     rua_personagens()
     movimento()
     screen.tracer(1)
-    fala(nascimento, "Cadê esse boy?", 225, 150, 5)
-    fala(douglas, "Esse amostradinho vai gaziar é?", 225, 150, 5)
+    fala(nascimento, "Cadê esse boy?", 225, 150, 5, nascimento_falando, nascimento_shape)
+    fala(douglas, "Esse amostradinho vai gaziar é?", 225, 150, 5, douglas_falando, douglas_shape)
     movimento_2()
-    fala(alanderson, "Perdi a hora galado, esqueci até da canelite de tanto correr", 45, 150, 5)
-    fala(nascimento, "Corre lek, vamo atrasar", 225, 150, 5)
+    fala(alanderson, "Perdi a hora galado, esqueci até da canelite de tanto correr", 45, 150, 5, alanderson_falando, alanderson_shape)
+    fala(nascimento, "Corre lek, vamo atrasar", 225, 150, 5, nascimento_falando, nascimento_shape)
     screen.tracer(0)
     movimento_3()
 
