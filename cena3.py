@@ -1,4 +1,4 @@
-from pacote.nucleo import fala, fala_2, andar
+from pacote.nucleo import fala, fala_2, andar, exibir_coordenadas, habilita_clique
 
 import turtle
 import time
@@ -124,7 +124,7 @@ def movimento1():
 
     while alanderson.xcor() != -210:
 
-        andar(nascimento, 10, 10)
+        andar(nascimento, 10, 10 if nascimento.ycor() < 13 else 0)
         time.sleep(0.1)
         trocar_shape(nascimento, nascimento_shape, nascimento_falando)
         screen.update()
@@ -139,11 +139,55 @@ def movimento1():
         trocar_shape(alanderson, alanderson_shape, alanderson_falando)
         screen.update()
 
+    while nascimento.xcor() < 250:
+
+        andar(nascimento, 10, 0)
+        time.sleep(0.1)
+        trocar_shape(nascimento, nascimento_shape, nascimento_falando)
+        screen.update()
+
+        andar(douglas, 10,  10 if douglas.ycor() < 13 else 0)
+        time.sleep(0.1)
+        trocar_shape(douglas, douglas_shape, douglas_falando)
+        screen.update()
+
+        andar(alanderson, 10, 10)
+        time.sleep(0.1)
+        trocar_shape(alanderson, alanderson_shape, alanderson_falando)
+        screen.update()
+
+    nascimento.hideturtle()
+    screen.update()
+    
+    while douglas.xcor() < 250:
+        andar(douglas, 10,  0)
+        time.sleep(0.1)
+        trocar_shape(douglas, douglas_shape, douglas_falando)
+        screen.update()
+
+        andar(alanderson, 10, 10 if alanderson.ycor() < 13 else 0)
+        time.sleep(0.1)
+        trocar_shape(alanderson, alanderson_shape, alanderson_falando)
+        screen.update()
+
+    douglas.hideturtle()
+    screen.update()
+
+    while alanderson.xcor() < 250:
+        andar(alanderson, 10, 0)
+        time.sleep(0.1)
+        trocar_shape(alanderson, alanderson_shape, alanderson_falando)
+        screen.update()
+
+    alanderson.hideturtle()
+    screen.update()
+
 
     pass
 
 def cena3():
     corredor_personagens()
+    habilita_clique()
     screen.tracer(1)
     #fala_2(irapuan, "Ei, esses galadinho de InfoV só fez bagunça no ônibus", 45, 50, 5)
     #fala_2(jurandy, "Oxi, quero ir denovo pra um passeio com essa galera, os caba é resenha demais", 135, 50, 5)
