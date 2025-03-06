@@ -22,6 +22,10 @@ def carrega_personagens():
 
     os.chdir(cam_atual.as_posix())
 
+
+def andar(personagem: turtle.Turtle, horizontal: int, vertical: int):
+    personagem.goto(personagem.xcor() + horizontal, personagem.ycor() + vertical)
+
 def fala(personagem: turtle.Turtle, 
          texto: str, 
          angulo: int, 

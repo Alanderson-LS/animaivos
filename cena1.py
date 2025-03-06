@@ -1,4 +1,4 @@
-from pacote.nucleo import fala
+from pacote.nucleo import fala, andar
 
 import turtle
 import time
@@ -46,8 +46,6 @@ def rua_personagens():
     screen.update()
     
 
-def andar(personagem: turtle.Turtle, horizontal: int, vertical: int):
-    personagem.goto(personagem.xcor() + horizontal, personagem.ycor() + vertical)
 
 def movimento():
     for i in range(33):

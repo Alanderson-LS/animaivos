@@ -27,3 +27,10 @@ redimensionar_imagem("pacote/personagens/alanderson_falando.png","pacote/persona
 redimensionar_imagem("pacote/personagens/gabriel_falando.png","pacote/personagens/nascimento_falando.gif", 100, 100)
 redimensionar_imagem("pacote/personagens/douglas_falando.png","pacote/personagens/douglas_falando.gif", 100, 100)
 redimensionar_imagem("pacote/fundos/corredor.jpeg", "pacote/fundos/corredor_redimensionado.gif", 800, 800)
+
+redimensionar_imagem("pacote/personagens/alanderson.gif", "pacote/personagens/alanderson_grande.gif", 240, 240)
+redimensionar_imagem("pacote/personagens/douglas.gif", "pacote/personagens/douglas_grande.gif", 240, 240)
+redimensionar_imagem("pacote/personagens/nascimento.gif", "pacote/personagens/nascimento_grande.gif", 240, 240)
+redimensionar_imagem("pacote/personagens/alanderson_falando.gif", "pacote/personagens/alanderson_falando_grande.gif", 240, 240)
+redimensionar_imagem("pacote/personagens/nascimento_falando.gif", "pacote/personagens/nascimento_falando_grande.gif", 240, 240)
+redimensionar_imagem("pacote/personagens/douglas_falando.gif", "pacote/personagens/douglas_falando_grande.gif", 240, 240)
