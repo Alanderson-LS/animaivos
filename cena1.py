@@ -3,22 +3,22 @@ from pacote.nucleo import carrega_img_fundo, carrega_personagens, fala, habilita
 import turtle
 import time
 
-balao = turtle.Turtle()
-balao.hideturtle()
-turtle.addshape("pacote/personagens/nascimento_falando.gif")
-turtle.addshape("pacote/personagens/alanderson_redimensionado.gif")
-turtle.addshape("pacote/personagens/nascimento_redimensionado.gif")
-turtle.addshape("pacote/personagens/douglas_redimensionado.gif")
-turtle.addshape("pacote/personagens/alanderson_falando.gif")
-turtle.addshape("pacote/personagens/douglas_falando.gif")
-alanderson_shape = ("pacote/personagens/alanderson_redimensionado.gif")
-nascimento_shape = ("pacote/personagens/nascimento_redimensionado.gif")
-douglas_shape = ("pacote/personagens/douglas_redimensionado.gif")
-alanderson_falando = ("pacote/personagens/alanderson_falando.gif")
-nascimento_falando = ("pacote/personagens/nascimento_falando.gif")
-douglas_falando = ("pacote/personagens/douglas_falando.gif")
 def rua_personagens():
-    global nascimento, alanderson, douglas, screen
+    global nascimento, alanderson, douglas, screen, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape
+    balao = turtle.Turtle()
+    balao.hideturtle()
+    turtle.addshape("pacote/personagens/nascimento_falando.gif")
+    turtle.addshape("pacote/personagens/alanderson_redimensionado.gif")
+    turtle.addshape("pacote/personagens/nascimento_redimensionado.gif")
+    turtle.addshape("pacote/personagens/douglas_redimensionado.gif")
+    turtle.addshape("pacote/personagens/alanderson_falando.gif")
+    turtle.addshape("pacote/personagens/douglas_falando.gif")
+    alanderson_shape = ("pacote/personagens/alanderson_redimensionado.gif")
+    nascimento_shape = ("pacote/personagens/nascimento_redimensionado.gif")
+    douglas_shape = ("pacote/personagens/douglas_redimensionado.gif")
+    alanderson_falando = ("pacote/personagens/alanderson_falando.gif")
+    nascimento_falando = ("pacote/personagens/nascimento_falando.gif")
+    douglas_falando = ("pacote/personagens/douglas_falando.gif")
     turtle.tracer(0)
 
     screen = turtle.Screen()
@@ -44,6 +44,7 @@ def rua_personagens():
     nascimento.goto(275, 450)
     douglas.goto(275, 570)
     screen.update()
+    
 
 def andar(personagem: turtle.Turtle, horizontal: int, vertical: int):
     personagem.goto(personagem.xcor() + horizontal, personagem.ycor() + vertical)
@@ -130,7 +131,6 @@ def cena1():
     fala(nascimento, "Corre lek, vamo atrasar", 225, 150, 5, nascimento_falando, nascimento_shape)
     screen.tracer(0)
     movimento_3()
-
-cena1()
-turtle.done()
+    time.sleep(5)
+    turtle.bye()
 

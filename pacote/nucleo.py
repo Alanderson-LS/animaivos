@@ -5,9 +5,6 @@ import turtle
 from pathlib import Path
 
 # Configurações do balão
-global balao
-balao = turtle.Turtle()
-balao.hideturtle()
 
 def carrega_personagens():
     """Carrega os personagens da animação.
@@ -33,6 +30,9 @@ def fala(personagem: turtle.Turtle,
          personagem_falando,
          personagem_shape
          ):
+    global balao
+    balao = turtle.Turtle()
+    balao.hideturtle()
     """Exibe um balão de fala para um personagem.
 
     Exibe um balão de fala para um personagem, com o texto

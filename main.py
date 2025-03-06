@@ -4,10 +4,12 @@ Módulo principal
 
 import turtle
 
-from pacote.nucleo import carrega_img_fundo, carrega_personagens, fala, habilita_clique
+from pacote.nucleo import carrega_img_fundo, fala, habilita_clique
 
 # Do módulo menus, do pacote ______, import o menu_principal
 from pacote.menus import menu_principal
+
+from cena1 import cena1
 
 def cena_demo():
     """Cena de demonstração."""
@@ -30,12 +32,7 @@ def cena_demo():
     gato.shape("cat_.gif")
     gato.goto(0, 0)
     
-# Renomei a função seguindo o padrao <cena_descricao_breve_cena>
-def cena1():
-    """
-    Descrição da cena 1
-    """
-    pass
+
 
 # Renomei a função seguindo o padrao <cena_descricao_breve_cena>
 def cena2():
@@ -61,11 +58,6 @@ def cena4():
 
 # Função principal
 def main():
-    carrega_personagens()    
-    print("Os seguintes personagens foram carregados:")
-    formas_gif = [forma for forma in turtle.getshapes() if forma.endswith('.gif')]
-    print('\n'.join(formas_gif))
-
     op = int(input(menu_principal))
     while op != 5:
         if op == 1:
