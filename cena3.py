@@ -21,6 +21,8 @@ def corredor_personagens():
     douglas_falando = ("pacote/personagens/douglas_falando_grande.gif")
     turtle.tracer(0)
 
+    
+
     screen = turtle.Screen()
     screen.setup(800, 800)
     screen.bgpic("pacote/fundos/corredor_redimensionado.gif")
@@ -59,29 +61,86 @@ def corredor_personagens():
 
 
 
-def trocar_shape(personagem: turtle.Turtle(), shape_1: str, shape_2: str):
+def trocar_shape(personagem: turtle.Turtle(), shape_1: str, shape_2: str, shape_3: str, shape_4: str, shape_5: str, shape_6, shape_7, shape_8):
     global alanderson_mov, douglas_mov, nascimento_mov
+    
     if personagem == alanderson:
         if alanderson_mov == 0:
             alanderson.shape(shape_1)
-            alanderson_mov = 1 - alanderson_mov
+            alanderson_mov = 7 - alanderson_mov
         elif alanderson_mov == 1:
             alanderson.shape(shape_2)
-            alanderson_mov = 1 - alanderson_mov
+            alanderson_mov = 7 - alanderson_mov
+        elif alanderson_mov == 2:
+            alanderson_shape(shape_3)
+            alanderson_mov = 7 - alanderson_mov
+        elif alanderson_mov == 3:
+            alanderson.shape(shape_4)
+            alanderson_mov = 7 - alanderson_mov
+        elif alanderson_mov == 4:
+            alanderson_shape(shape_5)
+            alanderson_mov = 7 - alanderson_mov
+        elif alanderson_mov == 5:
+            alanderson.shape(shape_6)
+            alanderson_mov = 7 - alanderson_mov
+        elif alanderson_mov == 6:
+            alanderson_shape(shape_7)
+            alanderson_mov = 7 - alanderson_mov
+        elif alanderson_mov == 7:
+            alanderson.shape(shape_8)
+            alanderson_mov = 7 - alanderson_mov
+    
     elif personagem == nascimento:
         if nascimento_mov == 0:
             nascimento.shape(shape_1)
-            nascimento_mov = 1 - nascimento_mov
+            nascimento_mov = 7 - nascimento_mov
         elif nascimento_mov == 1:
             nascimento.shape(shape_2)
-            nascimento_mov = 1 - nascimento_mov
+            nascimento_mov = 7 - nascimento_mov
+        elif nascimento_mov == 2:
+            nascimento_shape(shape_3)
+            nascimento_mov = 7 - nascimento_mov
+        elif nascimento_mov == 3:
+            nascimento.shape(shape_4)
+            nascimento_mov = 7 - nascimento_mov
+        elif nascimento_mov == 4:
+            nascimento_shape(shape_5)
+            nascimento_mov = 7 - nascimento_mov
+        elif nascimento_mov == 5:
+            nascimento.shape(shape_6)
+            nascimento_mov = 7 - nascimento_mov
+        elif nascimento_mov == 6:
+            nascimento_shape(shape_7)
+            nascimento_mov = 7 - nascimento_mov
+        elif nascimento_mov == 7:
+            nascimento.shape(shape_8)
+            nascimento_mov = 7 - nascimento_mov
+    
     elif personagem == douglas:
         if douglas_mov == 0:
             douglas.shape(shape_1)
-            douglas_mov = 1 - douglas_mov
+            douglas_mov = 7 - douglas_mov
         elif douglas_mov == 1:
             douglas.shape(shape_2)
-            douglas_mov = 1 - douglas_mov
+            douglas_mov = 7 - douglas_mov
+        elif douglas_mov == 2:
+            douglas_shape(shape_3)
+            douglas_mov = 7 - douglas_mov
+        elif douglas_mov == 3:
+            douglas.shape(shape_4)
+            douglas_mov = 7 - douglas_mov
+        elif douglas_mov == 4:
+            douglas_shape(shape_5)
+            douglas_mov = 7 - douglas_mov
+        elif douglas_mov == 5:
+            douglas.shape(shape_6)
+            douglas_mov = 7 - douglas_mov
+        elif douglas_mov == 6:
+            douglas_shape(shape_7)
+            douglas_mov = 7 - douglas_mov
+        elif douglas_mov == 7:
+            douglas.shape(shape_8)
+            douglas_mov = 7 - douglas_mov
 
 
 
