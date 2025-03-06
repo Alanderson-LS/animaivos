@@ -1,4 +1,4 @@
-from pacote.nucleo import carrega_img_fundo, carrega_personagens, fala, habilita_clique
+from pacote.nucleo import fala
 
 import turtle
 import time

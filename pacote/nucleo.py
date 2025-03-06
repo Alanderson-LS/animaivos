@@ -56,6 +56,34 @@ def fala(personagem: turtle.Turtle,
     balao.undo()
     balao.undo()
 
+def fala_2(personagem: turtle.Turtle, 
+         texto: str, 
+         angulo: int, 
+         distancia: int,
+         tempo: int
+         ):
+    global balao
+    balao = turtle.Turtle()
+    balao.hideturtle()
+    """Exibe um balão de fala para um personagem.
+
+    Exibe um balão de fala para um personagem, com o texto
+    passado como parâmetro, em um ângulo e distância específicos.
+    """
+    
+    balao.up()
+    x,y = personagem.pos()
+
+    balao.goto(x, y) 
+    balao.down() 
+    balao.left(angulo) 
+    balao.forward(distancia)
+    balao.write(texto)
+    time.sleep(tempo)
+    balao.undo()
+    balao.undo()
+    balao.undo()
+
 def carrega_img_fundo(img_fundo: str):
     """Carrega uma imagem de fundo para a tela.
 
