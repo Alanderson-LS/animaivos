@@ -89,7 +89,7 @@ for i, arquivo in enumerate(arquivos_douglas_, start=1):
 for i, arquivo in enumerate(arquivos_nascimento_, start=1):
     caminho_entrada = os.path.join("pacote/personagens/nascimento_andando", arquivo)
     caminho_saida = os.path.join("pacote/personagens", f"_nascimento_andando_{i}.gif")
-    redimensionar_imagem(caminho_entrada, caminho_saida, 6, 60)
+    redimensionar_imagem(caminho_entrada, caminho_saida, 60, 60)
 
 
 print("imagens redimensionadas com sucesso")
