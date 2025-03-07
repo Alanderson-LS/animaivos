@@ -11,6 +11,7 @@ try:
 #se der ImportError vai usar a biblioteca os pra instalar automaticamente
 except ImportError:
     os.system("pip install pillow")
+    print ("feche e abra o executador do código para prosseguir")
 
 def redimensionar_imagem(caminho_entrada, caminho_saida, largura, altura):
     #deixa a imagem aberta na biblioteca pillow pra ela ler a imagem
@@ -28,7 +29,7 @@ redimensionar_imagem("pacote/personagens/gabriel_falando.png","pacote/personagen
 redimensionar_imagem("pacote/personagens/douglas_falando.png","pacote/personagens/douglas_falando.gif", 100, 100)
 redimensionar_imagem("pacote/fundos/corredor.jpeg", "pacote/fundos/corredor_redimensionado.gif", 800, 800)
 
-redimensionar_imagem("pacote/personagens/alanderson.gif", "pacote/personagens/alanderson_grande.gif", 240, 240)
+redimensionar_imagem("pacote/personagens/alanderson.gif", "pacote/personagens/alanderson_grande.gif", 200, 200)
 redimensionar_imagem("pacote/personagens/douglas.gif", "pacote/personagens/douglas_grande.gif", 240, 240)
 redimensionar_imagem("pacote/personagens/nascimento.gif", "pacote/personagens/nascimento_grande.gif", 240, 240)
 redimensionar_imagem("pacote/personagens/alanderson_falando.gif", "pacote/personagens/alanderson_falando_grande.gif", 240, 240)
@@ -43,7 +44,7 @@ arquivos_nascimento = sorted([arquivo for arquivo in os.listdir("pacote/personag
 for i, arquivo in enumerate(arquivos_alan, start=1):
     caminho_entrada = os.path.join("pacote/personagens/alanderson_andando", arquivo)
     caminho_saida = os.path.join("pacote/personagens", f"alanderson_andando_{i}.gif")
-    redimensionar_imagem(caminho_entrada, caminho_saida, 240, 240)
+    redimensionar_imagem(caminho_entrada, caminho_saida, 200, 200)
 
 for i, arquivo in enumerate(arquivos_douglas, start=1):
     caminho_entrada = os.path.join("pacote/personagens/douglas_andando", arquivo)
@@ -54,3 +55,10 @@ for i, arquivo in enumerate(arquivos_nascimento, start=1):
     caminho_entrada = os.path.join("pacote/personagens/nascimento_andando", arquivo)
     caminho_saida = os.path.join("pacote/personagens", f"nascimento_andando_{i}.gif")
     redimensionar_imagem(caminho_entrada, caminho_saida, 240, 240)
+
+redimensionar_imagem("pacote/fundos/fundo_4.png.png", "pacote/fundos/sala.gif", 800, 800)
+redimensionar_imagem("pacote/personagens/jurandy_lado.png", "pacote/personagens/jurandy.gif", 240, 240)
+redimensionar_imagem("pacote/personagens/irapuan_lado.png", "pacote/personagens/irapuan.gif", 240, 240)
+
+
+print("imagens redimensionadas com sucesso")

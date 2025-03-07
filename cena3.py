@@ -1,8 +1,7 @@
-from pacote.nucleo import fala, fala_2, andar, exibir_coordenadas, habilita_clique
+from pacote.nucleo import fala_2, andar
 
 import turtle
 import time
-import os
 
 def corredor_personagens():
     global alanderson, nascimento, douglas, screen, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape, irapuan, jurandy, alanderson_mov, nascimento_mov, douglas_mov
@@ -19,6 +18,8 @@ def corredor_personagens():
     turtle.addshape("pacote/personagens/douglas_grande.gif")
     turtle.addshape("pacote/personagens/alanderson_falando_grande.gif")
     turtle.addshape("pacote/personagens/douglas_falando_grande.gif")
+    turtle.addshape("pacote/personagens/irapuan.gif")
+    turtle.addshape("pacote/personagens/jurandy.gif")
     
     turtle.addshape("pacote/personagens/nascimento_andando_1.gif")
     turtle.addshape("pacote/personagens/nascimento_andando_2.gif")
@@ -80,6 +81,9 @@ def corredor_personagens():
     alanderson_falando = ("pacote/personagens/alanderson_falando_grande.gif")
     nascimento_falando = ("pacote/personagens/nascimento_falando_grande.gif")
     douglas_falando = ("pacote/personagens/douglas_falando_grande.gif")
+
+    jurandy_shape = ("pacote/personagens/jurandy.gif")
+    irapuan_shape = ("pacote/personagens/irapuan.gif")
     
     
 
@@ -105,9 +109,12 @@ def corredor_personagens():
     douglas.penup()
 
     irapuan = turtle.Turtle()
+    irapuan.shape(irapuan_shape)    
     irapuan.penup()
+    
 
     jurandy = turtle.Turtle()
+    jurandy.shape(jurandy_shape)
     jurandy.penup()
 
     alanderson.goto(-700, -250)
@@ -132,80 +139,80 @@ def trocar_shape(personagem: turtle.Turtle(), shape_1: str, shape_2: str, shape_
     if personagem == alanderson:
         if alanderson_mov == 0:
             alanderson.shape(shape_1)
-            alanderson_mov = 7 - alanderson_mov
+            alanderson_mov += 1
         elif alanderson_mov == 1:
             alanderson.shape(shape_2)
-            alanderson_mov = 7 - alanderson_mov
+            alanderson_mov +=1
         elif alanderson_mov == 2:
-            alanderson_shape(shape_3)
-            alanderson_mov = 7 - alanderson_mov
+            alanderson.shape(shape_3)
+            alanderson_mov += 1
         elif alanderson_mov == 3:
             alanderson.shape(shape_4)
-            alanderson_mov = 7 - alanderson_mov
+            alanderson_mov += 1
         elif alanderson_mov == 4:
-            alanderson_shape(shape_5)
-            alanderson_mov = 7 - alanderson_mov
+            alanderson.shape(shape_5)
+            alanderson_mov += 1
         elif alanderson_mov == 5:
             alanderson.shape(shape_6)
-            alanderson_mov = 7 - alanderson_mov
+            alanderson_mov += 1
         elif alanderson_mov == 6:
-            alanderson_shape(shape_7)
-            alanderson_mov = 7 - alanderson_mov
+            alanderson.shape(shape_7)
+            alanderson_mov += 1
         elif alanderson_mov == 7:
             alanderson.shape(shape_8)
-            alanderson_mov = 7 - alanderson_mov
+            alanderson_mov %= 7
     
     elif personagem == nascimento:
         if nascimento_mov == 0:
             nascimento.shape(shape_1)
-            nascimento_mov = 7 - nascimento_mov
+            nascimento_mov += 1
         elif nascimento_mov == 1:
             nascimento.shape(shape_2)
-            nascimento_mov = 7 - nascimento_mov
+            nascimento_mov += 1
         elif nascimento_mov == 2:
-            nascimento_shape(shape_3)
-            nascimento_mov = 7 - nascimento_mov
+            nascimento.shape(shape_3)
+            nascimento_mov += 1
         elif nascimento_mov == 3:
             nascimento.shape(shape_4)
-            nascimento_mov = 7 - nascimento_mov
+            nascimento_mov += 1
         elif nascimento_mov == 4:
-            nascimento_shape(shape_5)
-            nascimento_mov = 7 - nascimento_mov
+            nascimento.shape(shape_5)
+            nascimento_mov += 1
         elif nascimento_mov == 5:
             nascimento.shape(shape_6)
-            nascimento_mov = 7 - nascimento_mov
+            nascimento_mov += 1
         elif nascimento_mov == 6:
-            nascimento_shape(shape_7)
-            nascimento_mov = 7 - nascimento_mov
+            nascimento.shape(shape_7)
+            nascimento_mov += 1
         elif nascimento_mov == 7:
             nascimento.shape(shape_8)
-            nascimento_mov = 7 - nascimento_mov
+            nascimento_mov %= 7
     
     elif personagem == douglas:
         if douglas_mov == 0:
             douglas.shape(shape_1)
-            douglas_mov = 7 - douglas_mov
+            douglas_mov += 1
         elif douglas_mov == 1:
             douglas.shape(shape_2)
-            douglas_mov = 7 - douglas_mov
+            douglas_mov += 1
         elif douglas_mov == 2:
-            douglas_shape(shape_3)
-            douglas_mov = 7 - douglas_mov
+            douglas.shape(shape_3)
+            douglas_mov += 1
         elif douglas_mov == 3:
             douglas.shape(shape_4)
-            douglas_mov = 7 - douglas_mov
+            douglas_mov += 1
         elif douglas_mov == 4:
-            douglas_shape(shape_5)
-            douglas_mov = 7 - douglas_mov
+            douglas.shape(shape_5)
+            douglas_mov += 1
         elif douglas_mov == 5:
             douglas.shape(shape_6)
-            douglas_mov = 7 - douglas_mov
+            douglas_mov += 1
         elif douglas_mov == 6:
-            douglas_shape(shape_7)
-            douglas_mov = 7 - douglas_mov
+            douglas.shape(shape_7)
+            douglas_mov += 1
         elif douglas_mov == 7:
             douglas.shape(shape_8)
-            douglas_mov = 7 - douglas_mov
+            douglas_mov %= 7
 
 
 
@@ -288,7 +295,7 @@ def movimento1():
         trocar_shape(douglas, d_mov_1, d_mov_2, d_mov_3, d_mov_4, d_mov_5, d_mov_6, d_mov_7, d_mov_8)
         screen.update()
 
-        andar(alanderson, 10, 10 if alanderson.ycor() < 13 else 0)
+        andar(alanderson, 10, 10 if alanderson.ycor() < 0 else 0)
         time.sleep(0.15)
         trocar_shape(alanderson, a_mov_1, a_mov_2, a_mov_3, a_mov_4, a_mov_5, a_mov_6, a_mov_7, a_mov_8)
         screen.update()
@@ -305,22 +312,25 @@ def movimento1():
     alanderson.hideturtle()
     screen.update()
 
-
-    pass
-
 def cena3():
     corredor_personagens()
-    habilita_clique()
     screen.tracer(1)
-    #fala_2(irapuan, "Ei, esses galadinho de InfoV só fez bagunça no ônibus", 45, 50, 5)
-    #fala_2(jurandy, "Oxi, quero ir denovo pra um passeio com essa galera, os caba é resenha demais", 135, 50, 5)
-    #fala_2(irapuan, "Ixi, eu é que não vou denovo, tu que se lasque kkkk", 45, 50, 5)
-    #fala_2(jurandy, "Oloco Pupu, tá desumilde hein", 135, 50, 5)
-    #fala_2(irapuan, "Ai dento", 45, 50, 5)
+    fala_2(irapuan, "Ei, esses galadinho de InfoV só fez bagunça no ônibus", 70, 140, 5)
+    fala_2(jurandy, "Oxi, quero ir denovo pra um passeio com essa galera, os caba é resenha demais", 135, 160, 5)
+    fala_2(irapuan, "Ixi, eu é que não vou denovo, tu que se lasque kkkk", 70, 140, 5)
+    fala_2(jurandy, "Oloco Pupu, tá desumilde hein", 135, 160, 5)
+    fala_2(irapuan, "Ai dento", 70, 140, 5)
     screen.tracer(0)
     movimento1()
+    screen.tracer(1)
+    fala_2(irapuan, "Vix, os doido quase escuta nois", 70, 140, 5)
+    fala_2(jurandy, "Tu que ia se lascar, KKKKKKKK", 135, 160, 5)
+    fala_2(irapuan, "Ai dento²", 70, 140, 5)
+    fala_2(jurandy, "Relaxe nóia, tem uma provinha bem massa esperando eles", 135, 160, 5)
+    fala_2(irapuan, "É O KARMA PELO PASSEIO HAHWAHAHHAHAHHA", 135, 140, 5)
 
-    turtle.done()
+    time.sleep(5)
+    turtle.bye(5)
 
-
-cena3()
+if __name__ == "__main__":
+    cena3()

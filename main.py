@@ -11,6 +11,8 @@ from pacote.menus import menu_principal
 
 from cena1 import cena1
 
+from cena3 import cena3
+
 def cena_demo():
     """Cena de demonstração."""
 
@@ -41,12 +43,7 @@ def cena2():
     """    
     pass
 
-# Renomei a função seguindo o padrao <cena_descricao_breve_cena>
-def cena3():
-    """
-    Descrição da cena 3
-    """    
-    pass
+
 
 # Renomei a função seguindo o padrao <cena_descricao_breve_cena>
 def cena4():
