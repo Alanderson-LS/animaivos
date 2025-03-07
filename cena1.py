@@ -3,8 +3,8 @@ from pacote.nucleo import fala, andar
 import turtle
 import time
 
-def rua_personagens():
-    global nascimento, alanderson, douglas, screen, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape
+def rua_personagens(screen: turtle.Screen()):
+    global nascimento, alanderson, douglas, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape
     balao = turtle.Turtle()
     balao.hideturtle()
     turtle.addshape("pacote/personagens/nascimento_falando.gif")
@@ -21,7 +21,6 @@ def rua_personagens():
     douglas_falando = ("pacote/personagens/douglas_falando.gif")
     turtle.tracer(0)
 
-    screen = turtle.Screen()
 
     screen.setup(800, 800)
     screen.bgpic("pacote/fundos/rua_redimensionada.gif")
@@ -47,7 +46,7 @@ def rua_personagens():
     
 
 
-def movimento():
+def movimento(screen: turtle.Screen()):
     for i in range(33):
         andar(nascimento, 0, -10)
         screen.update()
@@ -61,7 +60,7 @@ def movimento():
         Douglas(275, 240)
         """
 
-def movimento_2():
+def movimento_2(screen: turtle.Screen()):
     for i in range(20):
         andar(alanderson, 10, 0)
         screen.update()
@@ -70,7 +69,7 @@ def movimento_2():
         Alanderson: (-250, -130)
         """
 
-def movimento_3():
+def movimento_3(screen: turtle.Screen()):
     for i in range(25):
         andar(alanderson, 10, 10)
         time.sleep(0.05)
@@ -118,9 +117,9 @@ def movimento_3():
         screen.update()
 
 
-def cena1():
-    rua_personagens()
-    movimento()
+def cena1(screen: turtle.Screen()):
+    rua_personagens(screen)
+    movimento(screen)
     screen.tracer(1)
     fala(nascimento, "Cadê esse boy?", 225, 150, 5, nascimento_falando, nascimento_shape)
     fala(douglas, "Esse amostradinho vai gaziar é?", 225, 150, 5, douglas_falando, douglas_shape)
@@ -133,4 +132,4 @@ def cena1():
     turtle.bye()
 
 if __name__ == "__main__":
-    cena1()
+    cena1(screen= turtle.Screen)

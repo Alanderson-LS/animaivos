@@ -3,8 +3,8 @@ from pacote.nucleo import fala_2, andar, habilita_clique
 import turtle
 import time
 
-def caminho_personagens():
-    global alanderson, nascimento, douglas, screen, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape, irapuan, jurandy, alanderson_mov, nascimento_mov, douglas_mov
+def caminho_personagens(screen: turtle.Screen()):
+    global alanderson, nascimento, douglas, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape, alanderson_mov, nascimento_mov, douglas_mov
     global n_mov_1, n_mov_2, n_mov_3, n_mov_4, n_mov_5, n_mov_6, n_mov_7, n_mov_8
     global d_mov_1, d_mov_2, d_mov_3, d_mov_4, d_mov_5, d_mov_6, d_mov_7, d_mov_8
     global a_mov_1, a_mov_2, a_mov_3, a_mov_4, a_mov_5, a_mov_6, a_mov_7, a_mov_8
@@ -194,7 +194,7 @@ def trocar_shape(personagem: turtle.Turtle(), shape_1: str, shape_2: str, shape_
             douglas.shape(shape_8)
             douglas_mov %= 7
 
-def movimento1():
+def movimento1(screen):
     while alanderson.xcor() > -450:
         
         andar(nascimento, -10, 0)
@@ -213,10 +213,10 @@ def movimento1():
         screen.update()
     
 
-def cena2():
-    caminho_personagens()
+def cena2(screen: turtle.Screen()):
+    caminho_personagens(screen)
     habilita_clique()
-    movimento1()
-    turtle.done()
+    movimento1(screen)
+
 if __name__ == "__main__":
-    cena2()
+    cena2(screen = turtle.Screen())

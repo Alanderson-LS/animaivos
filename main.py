@@ -10,47 +10,18 @@ from pacote.nucleo import carrega_img_fundo, fala, habilita_clique
 from pacote.menus import menu_principal
 
 from cena1 import cena1
-
+from cena2 import cena2
 from cena3 import cena3
+from cena4 import cena4
 
-def cena_demo():
-    """Cena de demonstração."""
+screen = turtle.Screen()
+screen.setup(800, 800)
 
-    LARG=1110
-    ALT=694
-    MEIA_LARG=(LARG//2)
-    MEIA_ALT=(ALT//2)
-    turtle.setup(1110, 694)
-
-    carrega_img_fundo("fundo-com-degraus.png")
-
-    # O gato será visto em todo o programa
-    global gato
-    gato = turtle.Turtle(shape="_cat.gif")
-    gato.up()
-    fala(gato, "Olá!")
-    fala(gato, "Estou no centro da imagem.")
-    gato.goto(-MEIA_LARG, 0)
-    gato.shape("cat_.gif")
-    gato.goto(0, 0)
-    
-
-
-# Renomei a função seguindo o padrao <cena_descricao_breve_cena>
-def cena2():
-    """
-    Descrição da cena 2
-    """    
-    pass
-
-
-
-# Renomei a função seguindo o padrao <cena_descricao_breve_cena>
-def cena4():
-    """
-    Descrição da cena 4
-    """    
-    pass
+def deletar_turtles():
+    for t in screen.turtles():
+        t.hideturtle()
+        t.clear
+        del t
 
 
 # Função principal
@@ -58,16 +29,16 @@ def main():
     op = int(input(menu_principal))
     while op != 5:
         if op == 1:
-            cena1()
+            cena1(screen)
         elif op == 2:
-            cena2()
+            cena2(screen)
         elif op == 3:
             cena3()
         elif op == 4:
             cena4()
         else:
             print("Opção inválida.")
-            
+        deletar_turtles()
         op = int(input(menu_principal))
 
     # turtle.done()

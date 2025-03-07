@@ -6,9 +6,9 @@ menu_principal = """\
     Listagem de cenas:
 
        1. Rua
-       2. Cena 2
-       3. Cena 3
-       4. Cena 4
+       2. Caminho
+       3. Corredor
+       4. Sala de aula (Prova boss final)
        5. Sair
        
     Escolha sua opção: """
