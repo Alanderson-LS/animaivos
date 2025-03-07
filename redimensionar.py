@@ -60,19 +60,21 @@ redimensionar_imagem("pacote/fundos/fundo_4.png.png", "pacote/fundos/sala.gif", 
 redimensionar_imagem("pacote/personagens/jurandy_lado.png", "pacote/personagens/jurandy.gif", 240, 240)
 redimensionar_imagem("pacote/personagens/irapuan_lado.png", "pacote/personagens/irapuan.gif", 240, 240)
 
-redimensionar_imagem("pacote/personagens/ProvinhaNormal.png", "pacote/personagens/prova_normal.gif", 100, 100)
-redimensionar_imagem("pacote/personagens/ProvinhaAtk.png", "pacote/personagens/prova_ataque.gif", 100, 100)
-redimensionar_imagem("pacote/personagens/ProvinhaDerrotado.png", "pacote/personagens/prova_dano.gif", 100, 100)
+redimensionar_imagem("pacote/personagens/ProvinhaNormal.png.png", "pacote/personagens/prova_normal.gif", 150, 150)
+redimensionar_imagem("pacote/personagens/ProvinhaAtk2,0.png.png", "pacote/personagens/prova_ataque.gif", 150, 150)
+redimensionar_imagem("pacote/personagens/ProvinhaDerrotado2.png.png", "pacote/personagens/prova_dano.gif", 150, 150)
+redimensionar_imagem("pacote/personagens/ProvinhaRindo1.png.png", "pacote/personagens/prova_rindo_1.gif", 150, 150)
+redimensionar_imagem("pacote/personagens/ProvinhaRindo2.png.png", "pacote/personagens/prova_rindo_2.gif", 150, 150)
 
-redimensionar_imagem("pacote/personagens/nascimento_costa.png", "pacote/personagens/nascimento_costa.gif", 40, 40)
-redimensionar_imagem("pacote/personagens/alanderson_costa.png", "pacote/personagens/alanderson_costa.gif", 40, 40)
-redimensionar_imagem("pacote/personagens/douglas_costa.png", "pacote/personagens/douglas_costa.gif", 40, 40)
+redimensionar_imagem("pacote/personagens/nascimento_costa.png", "pacote/personagens/nascimento_costa.gif", 100, 100)
+redimensionar_imagem("pacote/personagens/alanderson_costa.png", "pacote/personagens/alanderson_costa.gif", 100, 100)
+redimensionar_imagem("pacote/personagens/douglas_costa.png", "pacote/personagens/douglas_costa.gif", 100, 100)
 
 redimensionar_imagem("pacote/fundos/foraif.png", "pacote/fundos/foraif.gif", 800, 800)
 
 arquivos_alan_ = sorted([arquivo for arquivo in os.listdir("pacote/personagens/alanderson_andando") if arquivo.startswith('_alanderson_andando')])
 arquivos_douglas_ = sorted([arquivo for arquivo in os.listdir("pacote/personagens/douglas_andando") if arquivo.startswith('_douglas_andando')])
-arquivos_nascimento_ = sorted([arquivo for arquivo in os.listdir("pacote/personagens/nascimento_andando") if arquivo.startswith('_douglas_andando')])
+arquivos_nascimento_ = sorted([arquivo for arquivo in os.listdir("pacote/personagens/nascimento_andando") if arquivo.startswith('_nascimento_andando')])
 
 for i, arquivo in enumerate(arquivos_alan_, start=1):
     caminho_entrada = os.path.join("pacote/personagens/alanderson_andando", arquivo)
