@@ -124,3 +124,4 @@ def habilita_clique() -> None:
     tela = turtle.Screen()
     tela.title("Clique para ver as coordenadas do mouse")
     tela.onclick(exibir_coordenadas)
+

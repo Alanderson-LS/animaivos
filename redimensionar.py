@@ -60,5 +60,9 @@ redimensionar_imagem("pacote/fundos/fundo_4.png.png", "pacote/fundos/sala.gif", 
 redimensionar_imagem("pacote/personagens/jurandy_lado.png", "pacote/personagens/jurandy.gif", 240, 240)
 redimensionar_imagem("pacote/personagens/irapuan_lado.png", "pacote/personagens/irapuan.gif", 240, 240)
 
+redimensionar_imagem("pacote/personagens/ProvinhaNormal.png", "pacote/personagens/prova_normal.gif", 100, 100)
+redimensionar_imagem("pacote/personagens/ProvinhaAtk.png", "pacote/personagens/prova_ataque.gif", 100, 100)
+redimensionar_imagem("pacote/personagens/ProvinhaDerrotado.png", "pacote/personagens/prova_dano.gif", 100, 100)
+
 
 print("imagens redimensionadas com sucesso")
