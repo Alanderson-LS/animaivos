@@ -27,7 +27,7 @@ def sala_personagens():
     alanderson.penup()
 
     douglas = turtle.Turtle()
-    
+    douglas.shape(douglas_costa)
     douglas.penup()
 
     nascimento = turtle.Turtle()

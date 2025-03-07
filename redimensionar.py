@@ -70,5 +70,24 @@ redimensionar_imagem("pacote/personagens/douglas_costa.png", "pacote/personagens
 
 redimensionar_imagem("pacote/fundos/foraif.png", "pacote/fundos/foraif.gif", 800, 800)
 
+arquivos_alan_ = sorted([arquivo for arquivo in os.listdir("pacote/personagens/alanderson_andando") if arquivo.startswith('_alanderson_andando')])
+arquivos_douglas_ = sorted([arquivo for arquivo in os.listdir("pacote/personagens/douglas_andando") if arquivo.startswith('_douglas_andando')])
+arquivos_nascimento_ = sorted([arquivo for arquivo in os.listdir("pacote/personagens/nascimento_andando") if arquivo.startswith('_douglas_andando')])
+
+for i, arquivo in enumerate(arquivos_alan_, start=1):
+    caminho_entrada = os.path.join("pacote/personagens/alanderson_andando", arquivo)
+    caminho_saida = os.path.join("pacote/personagens", f"_alanderson_andando_{i}.gif")
+    redimensionar_imagem(caminho_entrada, caminho_saida, 60, 60)
+
+for i, arquivo in enumerate(arquivos_douglas_, start=1):
+    caminho_entrada = os.path.join("pacote/personagens/douglas_andando", arquivo)
+    caminho_saida = os.path.join("pacote/personagens", f"_douglas_andando_{i}.gif")
+    redimensionar_imagem(caminho_entrada, caminho_saida, 60, 60)
+
+for i, arquivo in enumerate(arquivos_nascimento_, start=1):
+    caminho_entrada = os.path.join("pacote/personagens/nascimento_andando", arquivo)
+    caminho_saida = os.path.join("pacote/personagens", f"_nascimento_andando_{i}.gif")
+    redimensionar_imagem(caminho_entrada, caminho_saida, 6, 60)
+
 
 print("imagens redimensionadas com sucesso")
