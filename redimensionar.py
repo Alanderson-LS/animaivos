@@ -64,5 +64,8 @@ redimensionar_imagem("pacote/personagens/ProvinhaNormal.png", "pacote/personagen
 redimensionar_imagem("pacote/personagens/ProvinhaAtk.png", "pacote/personagens/prova_ataque.gif", 100, 100)
 redimensionar_imagem("pacote/personagens/ProvinhaDerrotado.png", "pacote/personagens/prova_dano.gif", 100, 100)
 
+redimensionar_imagem("pacote/personagens/nascimento_costa.png", "pacote/personagens/nascimento_costa.gif", 40, 40)
+redimensionar_imagem("pacote/personagens/alanderson_costa.png", "pacote/personagens/")
+
 
 print("imagens redimensionadas com sucesso")

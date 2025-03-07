@@ -132,3 +132,5 @@ def cena1():
     time.sleep(5)
     turtle.bye()
 
+if __name__ == "__main__":
+    cena1()

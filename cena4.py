@@ -33,11 +33,12 @@ def sala_personagens():
     douglas.goto(-20, -300)
     alanderson.goto(220, -300)
     
-    
+
 
 def cena4():
     habilita_clique()
     sala_personagens()
     turtle.done()
 
-cena4()
+if __name__ == "__main__":
+    cena4()
