@@ -14,6 +14,19 @@ def sala_personagens():
     turtle.addshape("pacote/personagens/douglas_costa.gif")
     turtle.addshape("pacote/personagens/nascimento_costa.gif")
 
+    turtle.addshape("pacote/personagens/prova_ataque.gif")
+    turtle.addshape("pacote/personagens/prova_dano.gif")
+    turtle.addshape("pacote/personagens/prova_normal.gif")
+    turtle.addshape("pacote/personagens/prova_rindo_1.gif")
+    turtle.addshape("pacote/personagens/prova_rindo_2.gif")
+
+    prova_dano = "pacote/personagens/prova_dano.gif"
+    prova_ataque = "pacote/personagens/prova_ataque.gif"
+    prova_normal = "pacote/personagens/prova_normal.gif"
+    prova_rindo_1 = "pacote/personagens/prova_rindo_1.gif"
+    prova_rindo_2 = "pacote/personagens/prova_rindo_2.gif"
+
+
     alanderson_costa = "pacote/personagens/alanderson_costa.gif"
     douglas_costa = "pacote/personagens/douglas_costa.gif"
     nascimento_costa = "pacote/personagens/nascimento_costa.gif"
@@ -21,6 +34,7 @@ def sala_personagens():
     screen = turtle.Screen()
     screen.setup(800, 800)
     screen.bgpic("pacote/fundos/sala.gif")
+    screen.tracer(0)
 
     alanderson = turtle.Turtle()
     alanderson.shape(alanderson_costa)
@@ -44,7 +58,7 @@ def sala_personagens():
     douglas.goto(-20, -300)
     alanderson.goto(220, -300)
 
-
+    screen.update()
 
 def cena4():
     habilita_clique()
