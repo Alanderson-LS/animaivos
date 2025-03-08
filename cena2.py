@@ -82,9 +82,7 @@ def caminho_personagens(screen = turtle.Screen()):
     douglas_falando = ("pacote/personagens/douglas_falando_grande.gif")
 
     brasilicio_shape = ("pacote/personagens/brasilicio.gif")
-    brasilicio = turtle.Turtle()
-    brasilicio.penup()
-    brasilicio.shape(brasilicio_shape)
+
  
 
 
@@ -106,6 +104,11 @@ def caminho_personagens(screen = turtle.Screen()):
     douglas = turtle.Turtle()
     douglas.shape(douglas_shape)
     douglas.penup()
+
+    brasilicio = turtle.Turtle()
+    brasilicio.shape(brasilicio_shape)
+    brasilicio.penup()
+ 
 
 
     alanderson.goto(545, -65)
@@ -218,6 +221,11 @@ def movimento1(screen = turtle.Screen()):
         time.sleep(0.1)
         trocar_shape(alanderson, a_mov_1, a_mov_2, a_mov_3, a_mov_4, a_mov_5, a_mov_6, a_mov_7, a_mov_8)
         screen.update()
+def start(screen = turtle.Screen()):
+    screen.tracer(1)
+    fala_2(nascimento, "Eai Brasil!!!, a PROVA já começou?", -160,-50, 5)
+    fala_2(brasilicio,"dbwquobdowbgo", -160,30,5)
+
     
 
 def cena2(screen = turtle.Screen()):
@@ -228,6 +236,7 @@ def cena2(screen = turtle.Screen()):
     caminho_personagens()
     habilita_clique()
     movimento1(screen)
+    start(screen)
     alanderson.hideturtle()
     douglas.hideturtle()
     nascimento.hideturtle()
