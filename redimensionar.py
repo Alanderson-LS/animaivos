@@ -70,6 +70,9 @@ redimensionar_imagem("pacote/personagens/nascimento_costa.png", "pacote/personag
 redimensionar_imagem("pacote/personagens/alanderson_costa.png", "pacote/personagens/alanderson_costa.gif", 100, 100)
 redimensionar_imagem("pacote/personagens/douglas_costa.png", "pacote/personagens/douglas_costa.gif", 100, 100)
 
+redimensionar_imagem("pacote/personagens/brasilicio.png", "pacote/personagens/brasilicio.gif", 100, 100)
+redimensionar_imagem("pacote/personagens/brasilicio_falando.png", "pacote/personagens/brasilicio_falando.gif", 100, 100)
+
 redimensionar_imagem("pacote/fundos/foraif.png", "pacote/fundos/foraif.gif", 800, 800)
 
 arquivos_alan_ = sorted([arquivo for arquivo in os.listdir("pacote/personagens/alanderson_andando") if arquivo.startswith('_alanderson_andando')])

@@ -44,6 +44,8 @@ def caminho_personagens(screen = turtle.Screen()):
     turtle.addshape("pacote/personagens/_alanderson_andando_6.gif")
     turtle.addshape("pacote/personagens/_alanderson_andando_7.gif")
     turtle.addshape("pacote/personagens/_alanderson_andando_8.gif")
+    turtle.addshape("pacote/personagens/brasilicio.gif")
+    turtle.addshape("pacote/personagens/brasilicio_falando.gif")
 
     n_mov_1 = ("pacote/personagens/_nascimento_andando_1.gif")
     n_mov_2 =("pacote/personagens/_nascimento_andando_2.gif")
@@ -78,6 +80,14 @@ def caminho_personagens(screen = turtle.Screen()):
     alanderson_falando = ("pacote/personagens/alanderson_falando_grande.gif")
     nascimento_falando = ("pacote/personagens/nascimento_falando_grande.gif")
     douglas_falando = ("pacote/personagens/douglas_falando_grande.gif")
+
+    brasilicio_shape = ("pacote/personagens/brasilicio.gif")
+    brasilicio = turtle.Turtle()
+    brasilicio.penup()
+    brasilicio.shape(brasilicio_shape)
+    brasilicio.goto(-209,-70)
+
+
         
 
 
