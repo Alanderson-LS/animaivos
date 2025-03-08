@@ -85,7 +85,7 @@ def caminho_personagens(screen = turtle.Screen()):
     brasilicio = turtle.Turtle()
     brasilicio.penup()
     brasilicio.shape(brasilicio_shape)
-    brasilicio.goto(-209,-70)
+ 
 
 
         
@@ -111,6 +111,7 @@ def caminho_personagens(screen = turtle.Screen()):
     alanderson.goto(545, -65)
     douglas.goto(504, -65)
     nascimento.goto(465,-65)
+    brasilicio.goto(-209,-40)
 
     alanderson_mov = 0
     douglas_mov = 0
@@ -201,7 +202,7 @@ def trocar_shape(personagem: turtle.Turtle, shape_1: str, shape_2: str, shape_3:
             douglas_mov %= 7
 
 def movimento1(screen = turtle.Screen()):
-    while alanderson.xcor() > -450:
+    while nascimento.xcor() > -167:
         
         andar(nascimento, -10, 0)
         time.sleep(0.1)
