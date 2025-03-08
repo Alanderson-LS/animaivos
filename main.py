@@ -14,15 +14,12 @@ from cena2 import cena2
 from cena3 import cena3
 from cena4 import cena4
 
+def criar_screen():
+    screen = turtle.Screen()
+    screen.setup(800, 800)
+    return screen
+
 screen = turtle.Screen()
-screen.setup(800, 800)
-
-def deletar_turtles():
-    for t in screen.turtles():
-        t.hideturtle()
-        t.clear
-        del t
-
 
 # Função principal
 def main():
@@ -38,7 +35,6 @@ def main():
             cena4()
         else:
             print("Opção inválida.")
-        deletar_turtles()
         op = int(input(menu_principal))
 
     # turtle.done()

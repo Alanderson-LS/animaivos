@@ -3,8 +3,8 @@ from pacote.nucleo import fala_2, andar
 import turtle
 import time
 
-def corredor_personagens():
-    global alanderson, nascimento, douglas, screen, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape, irapuan, jurandy, alanderson_mov, nascimento_mov, douglas_mov
+def corredor_personagens(screen = turtle.Screen()):
+    global alanderson, nascimento, douglas, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape, irapuan, jurandy, alanderson_mov, nascimento_mov, douglas_mov
     global n_mov_1, n_mov_2, n_mov_3, n_mov_4, n_mov_5, n_mov_6, n_mov_7, n_mov_8
     global d_mov_1, d_mov_2, d_mov_3, d_mov_4, d_mov_5, d_mov_6, d_mov_7, d_mov_8
     global a_mov_1, a_mov_2, a_mov_3, a_mov_4, a_mov_5, a_mov_6, a_mov_7, a_mov_8
@@ -90,9 +90,6 @@ def corredor_personagens():
 
     turtle.tracer(0)
 
-    
-
-    screen = turtle.Screen()
     screen.setup(800, 800)
     screen.bgpic("pacote/fundos/corredor_redimensionado.gif")
 
@@ -133,8 +130,12 @@ def corredor_personagens():
 
 
 
-def trocar_shape(personagem: turtle.Turtle(), shape_1: str, shape_2: str, shape_3: str, shape_4: str, shape_5: str, shape_6, shape_7, shape_8):
+def trocar_shape(personagem: turtle.Turtle, shape_1: str, shape_2: str, shape_3: str, shape_4: str, shape_5: str, shape_6, shape_7, shape_8):
     global alanderson_mov, douglas_mov, nascimento_mov
+    global alanderson, nascimento, douglas, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape, irapuan, jurandy, alanderson_mov, nascimento_mov, douglas_mov
+    global n_mov_1, n_mov_2, n_mov_3, n_mov_4, n_mov_5, n_mov_6, n_mov_7, n_mov_8
+    global d_mov_1, d_mov_2, d_mov_3, d_mov_4, d_mov_5, d_mov_6, d_mov_7, d_mov_8
+    global a_mov_1, a_mov_2, a_mov_3, a_mov_4, a_mov_5, a_mov_6, a_mov_7, a_mov_8
     
     if personagem == alanderson:
         if alanderson_mov == 0:
@@ -217,7 +218,7 @@ def trocar_shape(personagem: turtle.Turtle(), shape_1: str, shape_2: str, shape_
 
 
 
-def movimento1():
+def movimento1(screen = turtle.Screen()):
     while nascimento.xcor() != -210:
         
         andar(nascimento, 10, 0)
@@ -312,7 +313,11 @@ def movimento1():
     alanderson.hideturtle()
     screen.update()
 
-def cena3():
+def cena3(screen = turtle.Screen()):
+    global alanderson, nascimento, douglas, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape, irapuan, jurandy, alanderson_mov, nascimento_mov, douglas_mov
+    global n_mov_1, n_mov_2, n_mov_3, n_mov_4, n_mov_5, n_mov_6, n_mov_7, n_mov_8
+    global d_mov_1, d_mov_2, d_mov_3, d_mov_4, d_mov_5, d_mov_6, d_mov_7, d_mov_8
+    global a_mov_1, a_mov_2, a_mov_3, a_mov_4, a_mov_5, a_mov_6, a_mov_7, a_mov_8
     corredor_personagens()
     screen.tracer(1)
     fala_2(irapuan, "Ei, esses galadinho de InfoV só fez bagunça no ônibus", 70, 140, 5)
@@ -330,7 +335,62 @@ def cena3():
     fala_2(irapuan, "É O KARMA PELO PASSEIO HAHWAHAHHAHAHHA", 135, 140, 5)
 
     time.sleep(5)
-    turtle.bye(5)
+
+    irapuan.hideturtle()
+    jurandy.hideturtle
+    alanderson.hideturtle()
+    douglas.hideturtle()
+    nascimento.hideturtle()
+    irapuan.clear()
+    jurandy.clear()
+    nascimento.clear()
+    alanderson.clear()
+    douglas.clear()
+
+    nascimento.reset()
+    alanderson.reset()
+    douglas.reset()
+    
+    nascimento = None
+    alanderson = None
+    douglas = None
+    balao = None
+    alanderson_falando = None
+    alanderson_shape = None
+    douglas_falando = None
+    douglas_shape = None
+    nascimento_falando = None
+    nascimento_shape = None
+    alanderson_mov = None
+    douglas_mov = None
+    nascimento_mov = None
+    a_mov_1 = None
+    a_mov_2 = None
+    a_mov_3 = None
+    a_mov_4 = None
+    a_mov_5 = None
+    a_mov_6 = None
+    a_mov_7 = None
+    a_mov_8 = None
+    d_mov_1 = None
+    d_mov_2 = None
+    d_mov_3 = None
+    d_mov_4 = None
+    d_mov_5 = None
+    d_mov_6 = None
+    d_mov_7 = None
+    d_mov_8 = None
+    n_mov_1 = None
+    n_mov_2 = None
+    n_mov_3 = None
+    n_mov_4 = None
+    n_mov_5 = None
+    n_mov_6 = None
+    n_mov_7 = None
+    n_mov_8 = None
+
+    
+    screen.resetscreen()
 
 if __name__ == "__main__":
     cena3()

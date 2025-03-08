@@ -79,7 +79,7 @@ arquivos_nascimento_ = sorted([arquivo for arquivo in os.listdir("pacote/persona
 for i, arquivo in enumerate(arquivos_alan_, start=1):
     caminho_entrada = os.path.join("pacote/personagens/alanderson_andando", arquivo)
     caminho_saida = os.path.join("pacote/personagens", f"_alanderson_andando_{i}.gif")
-    redimensionar_imagem(caminho_entrada, caminho_saida, 60, 60)
+    redimensionar_imagem(caminho_entrada, caminho_saida, 50, 50)
 
 for i, arquivo in enumerate(arquivos_douglas_, start=1):
     caminho_entrada = os.path.join("pacote/personagens/douglas_andando", arquivo)

@@ -3,7 +3,8 @@ from pacote.nucleo import fala, andar
 import turtle
 import time
 
-def rua_personagens(screen: turtle.Screen()):
+
+def rua_personagens(screen = turtle.Screen()):
     global nascimento, alanderson, douglas, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape
     balao = turtle.Turtle()
     balao.hideturtle()
@@ -21,8 +22,6 @@ def rua_personagens(screen: turtle.Screen()):
     douglas_falando = ("pacote/personagens/douglas_falando.gif")
     turtle.tracer(0)
 
-
-    screen.setup(800, 800)
     screen.bgpic("pacote/fundos/rua_redimensionada.gif")
     
 
@@ -46,7 +45,7 @@ def rua_personagens(screen: turtle.Screen()):
     
 
 
-def movimento(screen: turtle.Screen()):
+def movimento(screen = turtle.Screen()):
     for i in range(33):
         andar(nascimento, 0, -10)
         screen.update()
@@ -60,7 +59,7 @@ def movimento(screen: turtle.Screen()):
         Douglas(275, 240)
         """
 
-def movimento_2(screen: turtle.Screen()):
+def movimento_2(screen = turtle.Screen()):
     for i in range(20):
         andar(alanderson, 10, 0)
         screen.update()
@@ -69,7 +68,7 @@ def movimento_2(screen: turtle.Screen()):
         Alanderson: (-250, -130)
         """
 
-def movimento_3(screen: turtle.Screen()):
+def movimento_3(screen = turtle.Screen()):
     for i in range(25):
         andar(alanderson, 10, 10)
         time.sleep(0.05)
@@ -117,7 +116,8 @@ def movimento_3(screen: turtle.Screen()):
         screen.update()
 
 
-def cena1(screen: turtle.Screen()):
+def cena1(screen = turtle.Screen()):
+    global nascimento, alanderson, douglas, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape
     rua_personagens(screen)
     movimento(screen)
     screen.tracer(1)
@@ -128,8 +128,30 @@ def cena1(screen: turtle.Screen()):
     fala(nascimento, "Corre lek, vamo atrasar", 225, 150, 5, nascimento_falando, nascimento_shape)
     screen.tracer(0)
     movimento_3()
-    time.sleep(5)
-    turtle.bye()
+    alanderson.hideturtle()
+    douglas.hideturtle()
+    nascimento.hideturtle()
+    nascimento.clear()
+    alanderson.clear()
+    douglas.clear()
+
+    nascimento.reset()
+    alanderson.reset()
+    douglas.reset()
+    
+    nascimento = None
+    alanderson = None
+    douglas = None
+    balao = None
+    alanderson_falando = None
+    alanderson_shape = None
+    douglas_falando = None
+    douglas_shape = None
+    nascimento_falando = None
+    nascimento_shape = None
+
+    
+    screen.resetscreen()
 
 if __name__ == "__main__":
-    cena1(screen= turtle.Screen)
+    cena1(screen = turtle.Screen())
