@@ -313,6 +313,11 @@ def movimento1(screen = turtle.Screen()):
     alanderson.hideturtle()
     screen.update()
 
+def limpar_personagens():
+    for t in turtle.turtles():
+        t.hideturtle()
+        t.clear()
+
 def cena3(screen = turtle.Screen()):
     global alanderson, nascimento, douglas, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape, irapuan, jurandy, alanderson_mov, nascimento_mov, douglas_mov
     global n_mov_1, n_mov_2, n_mov_3, n_mov_4, n_mov_5, n_mov_6, n_mov_7, n_mov_8
@@ -389,8 +394,7 @@ def cena3(screen = turtle.Screen()):
     n_mov_7 = None
     n_mov_8 = None
 
-    
-    screen.resetscreen()
+    limpar_personagens()
 
 if __name__ == "__main__":
     cena3()

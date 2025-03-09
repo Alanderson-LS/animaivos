@@ -11,5 +11,5 @@ menu_principal = """\
        4. Sala de aula (Prova boss final)
        5. Sair
        
-    Escolha sua opção:
-    (por favor, não feche a janela turtle após a cena acabar, apenas minimize e escolha a próxima!)"""
+    (por favor, não feche a janela turtle após a cena acabar, apenas minimize e escolha a próxima!)
+        Escolha sua opção: """
