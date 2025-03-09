@@ -46,6 +46,9 @@ def caminho_personagens(screen = turtle.Screen()):
     turtle.addshape("pacote/personagens/_alanderson_andando_8.gif")
     turtle.addshape("pacote/personagens/brasilicio.gif")
     turtle.addshape("pacote/personagens/brasilicio_falando.gif")
+    turtle.addshape("pacote/personagens/_douglas_costa.gif")
+    turtle.addshape("pacote/personagens/_alanderson_costa.gif")
+    turtle.addshape("pacote/personagens/_nascimento_costa.gif")
 
     n_mov_1 = ("pacote/personagens/_nascimento_andando_1.gif")
     n_mov_2 =("pacote/personagens/_nascimento_andando_2.gif")
@@ -83,6 +86,11 @@ def caminho_personagens(screen = turtle.Screen()):
 
     brasilicio_shape = ("pacote/personagens/brasilicio.gif")
 
+    douglas_costa = ("pacote/personagens/_douglas_costa.gif")
+    alanderson_costa = ("pacote/personagens/_alanderson_costa.gif")
+    nascimento_costa = ("pacote/personagens/_nascimento_costa.gif")
+    
+
  
 
 
@@ -99,14 +107,17 @@ def caminho_personagens(screen = turtle.Screen()):
 
     alanderson = turtle.Turtle()
     alanderson.shape(alanderson_shape)
+  
     alanderson.penup()
 
     nascimento = turtle.Turtle()
     nascimento.shape(nascimento_shape)
+
     nascimento.penup()
 
     douglas = turtle.Turtle()
     douglas.shape(douglas_shape)
+
     douglas.penup()
 
  
@@ -225,6 +236,9 @@ def movimento1(screen = turtle.Screen()):
 
 def start(screen = turtle.Screen()):
     screen.tracer(1)
+    alanderson.shape("pacote/personagens/_alanderson_costa.gif")
+    nascimento.shape("pacote/personagens/_nascimento_costa.gif")
+    douglas.shape("pacote/personagens/_douglas_costa.gif")
     fala_2(nascimento, "Eai Brasil!!!, a PROVA já começou?", -130, -70, 5)
     fala_2(brasilicio,"talvez viu", -160,-30,5)
     fala_2(douglas,"pois ta certo boy, vlw ai!", -130, -70, 5)
