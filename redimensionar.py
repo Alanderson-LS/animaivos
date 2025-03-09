@@ -65,6 +65,10 @@ redimensionar_imagem("pacote/personagens/ProvinhaAtk2,0.png.png", "pacote/person
 redimensionar_imagem("pacote/personagens/ProvinhaDerrotado2.png.png", "pacote/personagens/prova_dano.gif", 150, 150)
 redimensionar_imagem("pacote/personagens/ProvinhaRindo1.png.png", "pacote/personagens/prova_rindo_1.gif", 150, 150)
 redimensionar_imagem("pacote/personagens/ProvinhaRindo2.png.png", "pacote/personagens/prova_rindo_2.gif", 150, 150)
+redimensionar_imagem("pacote/personagens/provinhaBravo1.png", "pacote/personagens/prova_raiva_1.gif", 150, 150)
+redimensionar_imagem("pacote/personagens/provinhaBravo2.png", "pacote/personagens/prova_raiva_2.gif", 150, 150)
+redimensionar_imagem("pacote/personagens/provinhaConfuso1.png", "pacote/personagens/prova_confusa_1.gif", 150, 150)
+redimensionar_imagem("pacote/personagens/provinhaConfuso2.png", "pacote/personagens/prova_confusa_2.gif", 150, 150)
 
 redimensionar_imagem("pacote/personagens/nascimento_costa.png", "pacote/personagens/nascimento_costa.gif", 100, 100)
 redimensionar_imagem("pacote/personagens/alanderson_costa.png", "pacote/personagens/alanderson_costa.gif", 100, 100)

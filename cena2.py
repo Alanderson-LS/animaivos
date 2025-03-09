@@ -321,6 +321,7 @@ def cena2(screen = turtle.Screen()):
     n_mov_7 = None
     n_mov_8 = None
 
+    limpar_personagens()
     
 
 if __name__ == "__main__":
