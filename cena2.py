@@ -4,7 +4,7 @@ import turtle
 import time
 
 def caminho_personagens(screen = turtle.Screen()):
-    global alanderson, nascimento, douglas, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape, alanderson_mov, nascimento_mov, douglas_mov
+    global alanderson, nascimento, douglas,brasilicio, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape, alanderson_mov, nascimento_mov, douglas_mov
     global n_mov_1, n_mov_2, n_mov_3, n_mov_4, n_mov_5, n_mov_6, n_mov_7, n_mov_8
     global d_mov_1, d_mov_2, d_mov_3, d_mov_4, d_mov_5, d_mov_6, d_mov_7, d_mov_8
     global a_mov_1, a_mov_2, a_mov_3, a_mov_4, a_mov_5, a_mov_6, a_mov_7, a_mov_8
@@ -93,6 +93,10 @@ def caminho_personagens(screen = turtle.Screen()):
 
     screen.bgpic("pacote/fundos/foraif.gif")
 
+    brasilicio = turtle.Turtle()
+    brasilicio.shape(brasilicio_shape)
+    brasilicio.penup()
+
     alanderson = turtle.Turtle()
     alanderson.shape(alanderson_shape)
     alanderson.penup()
@@ -105,9 +109,6 @@ def caminho_personagens(screen = turtle.Screen()):
     douglas.shape(douglas_shape)
     douglas.penup()
 
-    brasilicio = turtle.Turtle()
-    brasilicio.shape(brasilicio_shape)
-    brasilicio.penup()
  
 
 
@@ -221,10 +222,30 @@ def movimento1(screen = turtle.Screen()):
         time.sleep(0.1)
         trocar_shape(alanderson, a_mov_1, a_mov_2, a_mov_3, a_mov_4, a_mov_5, a_mov_6, a_mov_7, a_mov_8)
         screen.update()
+
 def start(screen = turtle.Screen()):
     screen.tracer(1)
-    fala_2(nascimento, "Eai Brasil!!!, a PROVA já começou?", -160,-50, 5)
-    fala_2(brasilicio,"dbwquobdowbgo", -160,30,5)
+    fala_2(nascimento, "Eai Brasil!!!, a PROVA já começou?", -130, -70, 5)
+    fala_2(brasilicio,"talvez viu", -160,-30,5)
+    fala_2(douglas,"pois ta certo boy, vlw ai!", -130, -70, 5)
+
+def movimento2(screen = turtle.Screen()):
+    while alanderson.xcor() > -399:
+        
+        andar(nascimento, -10, 0)
+        time.sleep(0.1)
+        trocar_shape(nascimento, n_mov_1, n_mov_2, n_mov_3, n_mov_4, n_mov_5, n_mov_6, n_mov_7, n_mov_8)
+        screen.update()
+
+        andar(douglas, -10, 0)
+        time.sleep(0.1)
+        trocar_shape(douglas, d_mov_1, d_mov_2, d_mov_3, d_mov_4, d_mov_5, d_mov_6, d_mov_7, d_mov_8)
+        screen.update()
+
+        andar(alanderson, -10, 0)
+        time.sleep(0.1)
+        trocar_shape(alanderson, a_mov_1, a_mov_2, a_mov_3, a_mov_4, a_mov_5, a_mov_6, a_mov_7, a_mov_8)
+        screen.update()
 
     
 
@@ -237,6 +258,7 @@ def cena2(screen = turtle.Screen()):
     habilita_clique()
     movimento1(screen)
     start(screen)
+    movimento2(screen)
     alanderson.hideturtle()
     douglas.hideturtle()
     nascimento.hideturtle()
@@ -244,10 +266,6 @@ def cena2(screen = turtle.Screen()):
     alanderson.clear()
     douglas.clear()
 
-    nascimento.reset()
-    alanderson.reset()
-    douglas.reset()
-    
     nascimento = None
     alanderson = None
     douglas = None
@@ -287,7 +305,6 @@ def cena2(screen = turtle.Screen()):
     n_mov_8 = None
 
     
-    screen.resetscreen()
 
 if __name__ == "__main__":
     cena2(screen = turtle.Screen())
