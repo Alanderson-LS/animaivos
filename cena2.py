@@ -308,7 +308,6 @@ def cena2(screen = turtle.Screen()):
     n_mov_8 = None
 
     
-    screen.resetscreen()
 
 if __name__ == "__main__":
     cena2()
