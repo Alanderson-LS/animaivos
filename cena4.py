@@ -9,7 +9,7 @@ def sala_personagens(screen = turtle.Screen()):
     global alanderson
     global nascimento
     global douglas
-    global prova, prova_ataque, prova_normal, prova_dano, prova_rindo_1, prova_rindo_2
+    global prova, prova_ataque, prova_normal, prova_dano, prova_rindo_1, prova_rindo_2, prova_confusa_1, prova_confusa_2, prova_raiva_1, prova_raiva_2
     global hp_1, hp_2
     global hits
 
@@ -22,7 +22,16 @@ def sala_personagens(screen = turtle.Screen()):
     turtle.addshape("pacote/personagens/prova_normal.gif")
     turtle.addshape("pacote/personagens/prova_rindo_1.gif")
     turtle.addshape("pacote/personagens/prova_rindo_2.gif")
+    turtle.addshape("pacote/personagens/prova_raiva_1.gif")
+    turtle.addshape("pacote/personagens/prova_raiva_2.gif")
+    turtle.addshape("pacote/personagens/prova_confusa_1.gif")
+    turtle.addshape("pacote/personagens/prova_confusa_2.gif")
 
+
+    prova_raiva_1 = ("pacote/personagens/prova_raiva_1.gif")
+    prova_raiva_2 = ("pacote/personagens/prova_raiva_2.gif")
+    prova_confusa_1 = ("pacote/personagens/prova_confusa_1.gif")
+    prova_confusa_2 =("pacote/personagens/prova_confusa_2.gif")
     prova_dano = "pacote/personagens/prova_dano.gif"
     prova_ataque = "pacote/personagens/prova_ataque.gif"
     prova_normal = "pacote/personagens/prova_normal.gif"
@@ -41,7 +50,6 @@ def sala_personagens(screen = turtle.Screen()):
     douglas_costa = "pacote/personagens/douglas_costa.gif"
     nascimento_costa = "pacote/personagens/nascimento_costa.gif"
 
-    screen.setup(800, 800)
     screen.bgpic("pacote/fundos/sala.gif")
     screen.tracer(0)
 
@@ -102,12 +110,12 @@ def start(screen = turtle.Screen()):
     fala(prova, "MWAHAHAHA, VOCÊS IRÃO REPROVAR", 225, 150, 5, prova_rindo_1, prova_rindo_2)
     prova.shape(prova_normal)
     fala_2(alanderson, "ih ala, só pq é grande acha q é 2", 135, 100, 5)
-    fala(prova, "Que? de quem você está falando?", 225, 150, 5, prova_rindo_1, prova_rindo_2)
+    fala(prova, "Que? de quem você está falando?", 225, 150, 5, prova_confusa_1, prova_confusa_2)
     prova.shape(prova_normal)
     fala_2(alanderson, "MEU PAU KKKKKKKKK", 135, 100, 5)
-    fala(prova, "HA, HA, HA, MUITO ENGRAÇADINHO, NÉ?", 225, 150, 5, prova_rindo_1, prova_rindo_2)
+    fala(prova, "HA, HA, HA, MUITO ENGRAÇADINHO, NÉ?", 225, 150, 5, prova_raiva_1, prova_raiva_2)
     prova.shape(prova_normal)
-    fala(prova, "Só porque é palhaço tá achando que é dono do circo?", 225, 150, 5, prova_rindo_1, prova_rindo_2)
+    fala(prova, "Só porque é palhaço tá achando que é dono do circo?", 225, 150, 5, prova_raiva_1, prova_raiva_2)
     prova.shape(prova_normal)
     fala(prova, "Então vou te mostrar o show de verdade", 225, 150, 5, prova_rindo_1, prova_rindo_2)
     prova.shape(prova_normal)
@@ -253,7 +261,7 @@ def equa_pri_grau():
     fala(prova, "O que é uma equação de primeiro grau?", 225, 150, 5, prova_ataque, prova_normal)
     falas_1 = "Vix, essa é tão fácil que dormi na aula"
     falas_2 = "Respondo até de olho fechado essa aí"
-    resposta = "É uma equação polinomial que o \nexpoente da variável X é um \ne tem formato ax + b = 0"
+    resposta = "É uma equação polinomial que o \nexpoente da variável X é 1 \ne tem formato ax + b = 0"
     responde(falas_1)
     responde(falas_2)
     responde(resposta)
@@ -263,7 +271,7 @@ def equa_pri_grau():
     quadro()
     for _ in range(7):
         hp_1.undo()
-    fala_2(prova, "O que tá ficando mole sou eu \nchorei tanto que to murchando", 225, 150, 5)
+    fala_2(prova, "Quero mais saber de matemática não \no único resultado tá sendo minha humilhação", 225, 150, 5)
 
 
 def final(personagem):
@@ -315,7 +323,7 @@ def limpar_personagens():
         t.hideturtle()
         t.clear()
 
-perguntas = [clima_tempo, pais_continente, bhaskara, agua_gelo, mol]
+perguntas = [clima_tempo, pais_continente, bhaskara, agua_gelo, mol, equa_pri_grau]
 
 escolhidas = random.sample(perguntas, 4)
 

@@ -132,7 +132,7 @@ def corredor_personagens(screen = turtle.Screen()):
 
 def trocar_shape(personagem: turtle.Turtle, shape_1: str, shape_2: str, shape_3: str, shape_4: str, shape_5: str, shape_6, shape_7, shape_8):
     global alanderson_mov, douglas_mov, nascimento_mov
-    global alanderson, nascimento, douglas, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape, irapuan, jurandy, alanderson_mov, nascimento_mov, douglas_mov
+    global alanderson, nascimento, douglas
     global n_mov_1, n_mov_2, n_mov_3, n_mov_4, n_mov_5, n_mov_6, n_mov_7, n_mov_8
     global d_mov_1, d_mov_2, d_mov_3, d_mov_4, d_mov_5, d_mov_6, d_mov_7, d_mov_8
     global a_mov_1, a_mov_2, a_mov_3, a_mov_4, a_mov_5, a_mov_6, a_mov_7, a_mov_8
