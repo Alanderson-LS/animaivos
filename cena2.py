@@ -226,7 +226,10 @@ def start(screen = turtle.Screen()):
     fala_2(nascimento, "Eai Brasil!!!, a PROVA já começou?", -160,-50, 5)
     fala_2(brasilicio,"dbwquobdowbgo", -160,30,5)
 
-    
+def limpar_personagens():
+    for t in turtle.turtles():
+        t.hideturtle()
+        t.clear()
 
 def cena2(screen = turtle.Screen()):
     global alanderson, nascimento, douglas, balao, alanderson_falando, alanderson_shape, douglas_falando, douglas_shape, nascimento_falando, nascimento_shape, alanderson_mov, nascimento_mov, douglas_mov
@@ -286,8 +289,8 @@ def cena2(screen = turtle.Screen()):
     n_mov_7 = None
     n_mov_8 = None
 
-    
-    screen.resetscreen()
+
+    limpar_personagens()
 
 if __name__ == "__main__":
-    cena2(screen = turtle.Screen())
+    cena2()

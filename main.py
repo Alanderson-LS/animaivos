@@ -21,18 +21,26 @@ def criar_screen():
 
 screen = turtle.Screen()
 
+def limpar_personagens():
+    # Esconde e limpa todos os personagens
+    for t in turtle.turtles():
+        t.hideturtle()
+        t.clear()
+
 # Função principal
 def main():
     op = int(input(menu_principal))
+    limpar_personagens()
+    screen.update()
     while op != 5:
         if op == 1:
             cena1(screen)
         elif op == 2:
             cena2(screen)
         elif op == 3:
-            cena3()
+            cena3(screen)
         elif op == 4:
-            cena4()
+            cena4(screen)
         else:
             print("Opção inválida.")
         op = int(input(menu_principal))
