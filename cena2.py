@@ -8,7 +8,7 @@ def caminho_personagens(screen = turtle.Screen()):
     global n_mov_1, n_mov_2, n_mov_3, n_mov_4, n_mov_5, n_mov_6, n_mov_7, n_mov_8
     global d_mov_1, d_mov_2, d_mov_3, d_mov_4, d_mov_5, d_mov_6, d_mov_7, d_mov_8
     global a_mov_1, a_mov_2, a_mov_3, a_mov_4, a_mov_5, a_mov_6, a_mov_7, a_mov_8
-
+    global alanderson_costa, douglas_costa, nascimento_costa
     balao = turtle.Turtle()
     balao.hideturtle()
     turtle.addshape("pacote/personagens/nascimento_falando_grande.gif")
@@ -100,6 +100,7 @@ def caminho_personagens(screen = turtle.Screen()):
     turtle.tracer(0)
 
     screen.bgpic("pacote/fundos/foraif.gif")
+    screen.setup(800, 800)
 
     brasilicio = turtle.Turtle()
     brasilicio.shape(brasilicio_shape)
@@ -234,14 +235,15 @@ def movimento1(screen = turtle.Screen()):
         trocar_shape(alanderson, a_mov_1, a_mov_2, a_mov_3, a_mov_4, a_mov_5, a_mov_6, a_mov_7, a_mov_8)
         screen.update()
 
-def start(screen = turtle.Screen()):
+def dialogo(screen = turtle.Screen()):
     screen.tracer(1)
-    alanderson.shape("pacote/personagens/_alanderson_costa.gif")
-    nascimento.shape("pacote/personagens/_nascimento_costa.gif")
-    douglas.shape("pacote/personagens/_douglas_costa.gif")
-    fala_2(nascimento, "Eai Brasil!!!, a PROVA já começou?", -130, -70, 5)
-    fala_2(brasilicio,"talvez viu", -160,-30,5)
-    fala_2(douglas,"pois ta certo boy, vlw ai!", -130, -70, 5)
+    alanderson.shape(alanderson_costa)
+    nascimento.shape(nascimento_costa)
+    douglas.shape(douglas_costa)
+    fala_2(nascimento, "Eai Brasil!!!, a PROVA já começou?", 45, 150, 5)
+    fala_2(brasilicio, "RAPAZ, TÁ TERMINANDO, SE LIGA HEIN", 45,150,5)
+    fala_2(douglas,"pois ta certo boy, vlw ai!", 45, 150, 5)
+    fala_2(brasilicio, "DE NADA, DEUS LHE ABENÇOE E LHE PAGUE", 45, 150, 5)
 
 def movimento2(screen = turtle.Screen()):
     while alanderson.xcor() > -399:
@@ -274,7 +276,7 @@ def cena2(screen = turtle.Screen()):
     caminho_personagens()
     habilita_clique()
     movimento1(screen)
-    start(screen)
+    dialogo(screen)
     movimento2(screen)
     alanderson.hideturtle()
     douglas.hideturtle()

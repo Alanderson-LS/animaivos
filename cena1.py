@@ -21,7 +21,7 @@ def rua_personagens(screen = turtle.Screen()):
     nascimento_falando = ("pacote/personagens/nascimento_falando.gif")
     douglas_falando = ("pacote/personagens/douglas_falando.gif")
     turtle.tracer(0)
-
+    screen.setup(800, 800)
     screen.bgpic("pacote/fundos/rua_redimensionada.gif")
     
 

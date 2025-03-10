@@ -112,7 +112,7 @@ def start(screen = turtle.Screen()):
     fala_2(alanderson, "ih ala, só pq é grande acha q é 2", 135, 100, 5)
     fala(prova, "Que? de quem você está falando?", 225, 150, 5, prova_confusa_1, prova_confusa_2)
     prova.shape(prova_normal)
-    fala_2(alanderson, "MEU PAU KKKKKKKKK", 135, 100, 5)
+    fala_2(alanderson, "MEU *** KKKKKKKKK", 135, 100, 5)
     fala(prova, "HA, HA, HA, MUITO ENGRAÇADINHO, NÉ?", 225, 150, 5, prova_raiva_1, prova_raiva_2)
     prova.shape(prova_normal)
     fala(prova, "Só porque é palhaço tá achando que é dono do circo?", 225, 150, 5, prova_raiva_1, prova_raiva_2)
@@ -127,7 +127,7 @@ def mensagem_pergunta():
     if hits == 1:
         mensagem = "Foi pura sorte! Dessa vez será diferente."
     if hits == 2:
-        mensagem = "Estava apenas testado vocês, não será dessa vez!"
+        mensagem = "Estava apenas testando vocês, não será dessa vez!"
     if hits == 3:
         mensagem = "Ok, você não são tão ruins assim, a última pergunta vai ser pesada!"
 
