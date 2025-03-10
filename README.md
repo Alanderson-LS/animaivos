@@ -37,30 +37,17 @@ Faça uma animação que atenda aos seguintes requisitos:
 ## Execução interativa
 
 ```
-$ python -i main.py 
-Os seguintes personagens foram carregados:
-_cat.gif
-_elephant.gif
-_mouse.gif
-cat_.gif
-elephant_.gif
-mouse_.gif
-
-    Animação de Fulano, Beltrano e Sicrano
+    Animação de Alanderson Lima, Douglas Ryan e Gabriel Nascimento
     ======================================
-
+    
     Listagem de cenas:
 
-       1. Cena 1
-       2. Cena 2
-       3. Cena 3
-       4. Cena 4
+       1. Rua
+       2. Caminho
+       3. Corredor
+       4. Sala de aula (Prova boss final)
        5. Sair
-
-    Escolha sua opção: 5
->>> cena_demo()
->>> fala(gato, "Oi!", distancia=50, angulo=135, tempo=1)
->>> habilita_clique()
->>> turtle.exitonclick()
->>> exit()
+       
+    (por favor, não feche a janela turtle após a cena acabar, apenas minimize e escolha a próxima!)
+        Escolha sua opção:
 ```
