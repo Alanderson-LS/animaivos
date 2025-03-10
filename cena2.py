@@ -90,13 +90,6 @@ def caminho_personagens(screen = turtle.Screen()):
     alanderson_costa = ("pacote/personagens/_alanderson_costa.gif")
     nascimento_costa = ("pacote/personagens/_nascimento_costa.gif")
     
-
- 
-
-
-        
-
-
     turtle.tracer(0)
 
     screen.bgpic("pacote/fundos/foraif.gif")

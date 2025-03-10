@@ -51,6 +51,7 @@ def sala_personagens(screen = turtle.Screen()):
     nascimento_costa = "pacote/personagens/nascimento_costa.gif"
 
     screen.bgpic("pacote/fundos/sala.gif")
+    screen.setup(800, 800)
     screen.tracer(0)
 
     alanderson = turtle.Turtle()
