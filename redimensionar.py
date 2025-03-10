@@ -77,9 +77,9 @@ redimensionar_imagem("pacote/personagens/douglas_costa.png", "pacote/personagens
 redimensionar_imagem("pacote/personagens/brasilicio.png", "pacote/personagens/brasilicio.gif", 50, 50)
 redimensionar_imagem("pacote/personagens/brasilicio_falando.png", "pacote/personagens/brasilicio_falando.gif", 50, 50)
 
-redimensionar_imagem("pacote/personagens/nascimento_costa.png", "pacote/personagens/_nascimento_costa.gif", 60, 60)
-redimensionar_imagem("pacote/personagens/alanderson_costa.png", "pacote/personagens/_alanderson_costa.gif", 60, 60)
-redimensionar_imagem("pacote/personagens/douglas_costa.png", "pacote/personagens/_douglas_costa.gif", 60, 60)
+redimensionar_imagem("pacote/personagens/nascimento_costa.png", "pacote/personagens/_nascimento_costa.gif", 50, 50)
+redimensionar_imagem("pacote/personagens/alanderson_costa.png", "pacote/personagens/_alanderson_costa.gif", 50, 50)
+redimensionar_imagem("pacote/personagens/douglas_costa.png", "pacote/personagens/_douglas_costa.gif", 50, 50)
 
 redimensionar_imagem("pacote/fundos/foraif.png", "pacote/fundos/foraif.gif", 800, 800)
 
