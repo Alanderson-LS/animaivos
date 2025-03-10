@@ -32,7 +32,7 @@ def main():
     op = int(input(menu_principal))
     limpar_personagens()
     screen.update()
-    while op != 5:
+    while op != 6:
         if op == 1:
             cena1(screen)
         elif op == 2:
@@ -40,6 +40,11 @@ def main():
         elif op == 3:
             cena3(screen)
         elif op == 4:
+            cena4(screen)
+        elif op == 5:
+            cena1(screen)
+            cena2(screen)
+            cena3(screen)
             cena4(screen)
         else:
             print("Opção inválida.")
